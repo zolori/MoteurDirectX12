@@ -1,3 +1,1 @@
-﻿  WinMain.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(12): warning STL4038: The contents of <optional> are available only with C++17 or later.
-  MoteurDirectX12.vcxproj -> C:\Users\lpham-vu\Documents\GitHub\MoteurDirectX12\x64\Debug\MoteurDirectX12.exe
+﻿  MoteurDirectX12.vcxproj -> C:\Users\lpham-vu\Documents\GitHub\MoteurDirectX12\x64\Debug\MoteurDirectX12.exe
