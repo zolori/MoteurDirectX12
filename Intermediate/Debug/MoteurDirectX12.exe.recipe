@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\alban\Documents\C++\MoteurDirectX12\x64\Debug\MoteurDirectX12.exe</FullPath>
+      <FullPath>C:\Users\alban\Documents\C++\MoteurDirectX12\Build\MoteurDirectX12\Debug\MoteurDirectX12.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
