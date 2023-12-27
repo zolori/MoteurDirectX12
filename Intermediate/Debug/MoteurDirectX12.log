@@ -1,75 +1,7 @@
 ﻿  d3dApp.cpp
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(166,2): error C2065: 'CD3DX12_CPU_DESCRIPTOR_HANDLE' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(166,32): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'rtvHeapHandle'
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(166,32): error C3861: 'rtvHeapHandle' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(170,74): error C2065: 'rtvHeapHandle' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(171,3): error C2065: 'rtvHeapHandle' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(199,2): error C3861: 'CD3DX12_HEAP_PROPERTIES' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(216,36): error C2653: 'CD3DX12_RESOURCE_BARRIER' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(216,62): error C3861: 'Transition' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(547,24): error C2664: 'HANDLE CreateEventExW(LPSECURITY_ATTRIBUTES,LPCWSTR,DWORD,DWORD)' : impossible de convertir l'argument 2 de 'bool' en 'LPCWSTR'
-  C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(547,47):
-  La conversion d'un type intégral en un type pointeur nécessite un reinterpret_cast, un cast de style C ou un cast de style fonction entre parenthèses.
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\synchapi.h(599,1):
-  voir la déclaration de 'CreateEventExW'
-  C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(547,24):
-  lors de la tentative de mise en correspondance de la liste des arguments '(nullptr, bool, bool, long)'
-  
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dApp.cpp(565,9): error C3861: 'CD3DX12_CPU_DESCRIPTOR_HANDLE' : identificateur introuvable
   d3dUtil.cpp
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(48,5): error C3861: 'CD3DX12_HEAP_PROPERTIES' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(48,5): error C2653: 'CD3DX12_RESOURCE_DESC' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(48,5): error C3861: 'Buffer' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(58,5): error C3861: 'CD3DX12_HEAP_PROPERTIES' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(58,5): error C2653: 'CD3DX12_RESOURCE_DESC' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(58,5): error C3861: 'Buffer' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(76,31): error C2653: 'CD3DX12_RESOURCE_BARRIER' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(76,57): error C3861: 'Transition' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(78,5): error C2065: 'UpdateSubresources' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(79,31): error C2653: 'CD3DX12_RESOURCE_BARRIER' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\d3dUtil.cpp(79,57): error C3861: 'Transition' : identificateur introuvable
   GameTimer.cpp
   MathHelper.cpp
   TriangleApp.cpp
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\UploadBuffer.h(24,9): error C3861: 'CD3DX12_HEAP_PROPERTIES' : identificateur introuvable
-  (compiler le fichier source 'TriangleApp.cpp')
-  C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\UploadBuffer.h(24,9):
-  le contexte d’instanciation du modèle (le plus ancien) est
-  	C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\UploadBuffer.h(64,2):
-  	voir la référence à l'instanciation classe modèle 'UploadBuffer<T>' en cours de compilation
-  
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\UploadBuffer.h(24,9): error C3861: 'CD3DX12_RESOURCE_DESC' : identificateur introuvable
-  (compiler le fichier source 'TriangleApp.cpp')
-  
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\UploadBuffer.h(24,9): error C2065: 'CD3DX12_RESOURCE_DESC' : identificateur non déclaré
-  (compiler le fichier source 'TriangleApp.cpp')
-  
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(189,39): error C2653: 'CD3DX12_RESOURCE_BARRIER' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(189,65): error C3861: 'Transition' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(197,90): error C2102: '&' nécessite une l-value
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(197,63): error C2102: '&' nécessite une l-value
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(204,75): error C2102: '&' nécessite une l-value
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(205,66): error C2102: '&' nécessite une l-value
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(215,39): error C2653: 'CD3DX12_RESOURCE_BARRIER' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(215,65): error C3861: 'Transition' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(320,5): error C2065: 'CD3DX12_ROOT_PARAMETER' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(320,28): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'slotRootParameter'
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(320,28): error C2065: 'slotRootParameter' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(323,5): error C2065: 'CD3DX12_DESCRIPTOR_RANGE' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(323,30): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'cbvTable'
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(323,30): error C2065: 'cbvTable' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(324,5): error C2065: 'cbvTable' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(325,5): error C2065: 'slotRootParameter' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(325,52): error C2065: 'cbvTable' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(328,5): error C2065: 'CD3DX12_ROOT_SIGNATURE_DESC' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(328,33): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'rootSigDesc'
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(328,48): error C2065: 'slotRootParameter' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(328,33): error C3861: 'rootSigDesc' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(334,47): error C2065: 'rootSigDesc' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(422,55): error C2065: 'D3D12_DEFAULT' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(422,31): error C3861: 'CD3DX12_RASTERIZER_DESC' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(423,45): error C2065: 'D3D12_DEFAULT' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(423,26): error C3861: 'CD3DX12_BLEND_DESC' : identificateur introuvable
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(424,60): error C2065: 'D3D12_DEFAULT' : identificateur non déclaré
-C:\Users\alban\Documents\C++\MoteurDirectX12\MoteurDirectX12\TriangleApp.cpp(424,33): error C3861: 'CD3DX12_DEPTH_STENCIL_DESC' : identificateur introuvable
   Génération de code en cours...
+  MoteurDirectX12.vcxproj -> C:\Users\alban\Documents\C++\MoteurDirectX12\Build\MoteurDirectX12\Debug\MoteurDirectX12.exe

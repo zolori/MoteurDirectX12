@@ -185,24 +185,32 @@ void TriangleApp::Draw(const GameTimer& gt)
     mCommandList->RSSetViewports(1, &mScreenViewport);
     mCommandList->RSSetScissorRects(1, &mScissorRect);
 
+    CD3DX12_RESOURCE_BARRIER resbar3 = CD3DX12_RESOURCE_BARRIER::Transition(CurrentBackBuffer(),
+        D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET);
+
     // Indicate a state transition on the resource usage.
-    mCommandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(CurrentBackBuffer(),
-        D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET));
+    mCommandList->ResourceBarrier(1, &resbar3);
 
     // Clear the back buffer and depth buffer.
     mCommandList->ClearRenderTargetView(CurrentBackBufferView(), Colors::LightSteelBlue, 0, nullptr);
     mCommandList->ClearDepthStencilView(DepthStencilView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
 
+    D3D12_CPU_DESCRIPTOR_HANDLE backBufferView = CurrentBackBufferView();
+    D3D12_CPU_DESCRIPTOR_HANDLE depthStencilView = DepthStencilView();
+
     // Specify the buffers we are going to render to.
-    mCommandList->OMSetRenderTargets(1, &CurrentBackBufferView(), true, &DepthStencilView());
+    mCommandList->OMSetRenderTargets(1, &backBufferView, true, &depthStencilView);
 
     ID3D12DescriptorHeap* descriptorHeaps[] = { mCbvHeap.Get() };
     mCommandList->SetDescriptorHeaps(_countof(descriptorHeaps), descriptorHeaps);
 
     mCommandList->SetGraphicsRootSignature(mRootSignature.Get());
 
-    mCommandList->IASetVertexBuffers(0, 1, &mTriangleGeo->VertexBufferView());
-    mCommandList->IASetIndexBuffer(&mTriangleGeo->IndexBufferView());
+    D3D12_VERTEX_BUFFER_VIEW triangl = mTriangleGeo->VertexBufferView();
+    D3D12_INDEX_BUFFER_VIEW triangl2 = mTriangleGeo->IndexBufferView();
+
+    mCommandList->IASetVertexBuffers(0, 1, &triangl);
+    mCommandList->IASetIndexBuffer(&triangl2);
     mCommandList->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
     mCommandList->SetGraphicsRootDescriptorTable(0, mCbvHeap->GetGPUDescriptorHandleForHeapStart());
@@ -211,9 +219,11 @@ void TriangleApp::Draw(const GameTimer& gt)
         mTriangleGeo->DrawArgs["triangle"].IndexCount,
         1, 0, 0, 0);
 
+    CD3DX12_RESOURCE_BARRIER resbar4 = CD3DX12_RESOURCE_BARRIER::Transition(CurrentBackBuffer(),
+        D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
+
     // Indicate a state transition on the resource usage.
-    mCommandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(CurrentBackBuffer(),
-        D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT));
+    mCommandList->ResourceBarrier(1, &resbar4);
 
     // Done recording commands.
     ThrowIfFailed(mCommandList->Close());

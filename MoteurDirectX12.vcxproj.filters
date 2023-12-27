@@ -53,7 +53,7 @@
     <ClInclude Include="MathHelper.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\DirectXTK12\Inc\DDSTextureLoader.h">
+    <ClInclude Include="DDSTextureLoader.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
