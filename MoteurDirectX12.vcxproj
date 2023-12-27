@@ -147,6 +147,7 @@
     <ClInclude Include="DDSTextureLoader.h" />
     <ClInclude Include="GameTimer.h" />
     <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="UploadBuffer.h" />
     <ClInclude Include="WindowApp.h" />
   </ItemGroup>
