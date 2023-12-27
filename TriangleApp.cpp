@@ -375,9 +375,9 @@ void TriangleApp::BuildTriangleGeometry()
 {
     std::array<Vertex, 3> vertices =
     {
-        Vertex({ XMFLOAT3(0.0f, 0.5f, 0.0f), XMFLOAT4(Colors::Magenta) }),
-        Vertex({ XMFLOAT3(0.5f, -0.5f, 0.0f), XMFLOAT4(Colors::Yellow) }),
-        Vertex({ XMFLOAT3(-0.5f, -0.5f, 0.0f), XMFLOAT4(Colors::Cyan) })
+        Vertex({ XMFLOAT3(0.0f, 1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
+        Vertex({ XMFLOAT3(1.f, -1.f, 0.0f), XMFLOAT4(Colors::Yellow) }),
+        Vertex({ XMFLOAT3(-1.f, -1.f, 0.0f), XMFLOAT4(Colors::Cyan) }),
     };
 
     std::array<std::uint16_t, 3> indices = { 0, 1, 2 };
