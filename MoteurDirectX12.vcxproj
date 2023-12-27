@@ -127,10 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="d3dApp.cpp" />
+    <ClCompile Include="EngineTimer.cpp" />
+    <ClCompile Include="Transform.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="d3dApp.h" />
     <ClInclude Include="d3dx12.h" />
+    <ClInclude Include="EngineTimer.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="WindowApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

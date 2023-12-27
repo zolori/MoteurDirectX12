@@ -33,5 +33,3 @@ private:
     XMFLOAT3 rotation;
     XMFLOAT3 scale;
 };
-
-
