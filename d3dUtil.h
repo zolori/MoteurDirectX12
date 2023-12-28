@@ -31,6 +31,9 @@
 
 extern const int gNumFrameResources;
 
+#define SAFE_RELEASE(p) { if ( (p) ) { (p)->Release(); (p) = 0; } }
+
+
 inline void d3dSetDebugName(IDXGIObject* obj, const char* name)
 {
     if (obj)

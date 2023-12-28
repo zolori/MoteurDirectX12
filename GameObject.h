@@ -1,5 +1,6 @@
 #pragma once
 #include "Transform.h"
+#include "d3dUtil.h"
 #include <vector>
 #include <d3d12.h>
 
@@ -21,18 +22,11 @@ protected:
     int m_frameBufferCount = 0;
     ConstantBufferObject cbObject;
     std::vector<GameObject*> m_children;
-    DirectX::XMFLOAT4 m_up;
-    DirectX::XMFLOAT4 m_right;
-    DirectX::XMFLOAT4 m_target;
-    DirectX::XMFLOAT4 m_position;
-    DirectX::XMFLOAT4X4 m_transformationMatrix;
-    DirectX::XMFLOAT4X4 m_viewMatrix;
+
+    Transform transform;
 
 public:
 
-    void Rotate(float x, float y, float z, float value);
-    void Translate(float x, float y, float z);
-    void Scale(float x, float y, float z);
     void SetParent(GameObject* a_parent);
     void AddChildren(GameObject* a_child);
     void Draw(ID3D12GraphicsCommandList* a_commandList, int a_frameIndex, Camera* a_camera, DirectX::XMMATRIX a_transformationMatrix = DirectX::XMMatrixIdentity());
@@ -49,8 +43,8 @@ public:
 
 
     GameObject();
-    GameObject(DirectX::XMFLOAT4 a_position);
-    GameObject(DirectX::XMFLOAT4 a_position, DirectX::XMFLOAT4 a_target, DirectX::XMFLOAT4 a_up, DirectX::XMFLOAT4 a_right);
+    GameObject(DirectX::XMFLOAT4 position);
+    GameObject(DirectX::XMFLOAT4 position, DirectX::XMFLOAT4 target, DirectX::XMFLOAT4 up, DirectX::XMFLOAT4 right);
     ~GameObject();
 
 
