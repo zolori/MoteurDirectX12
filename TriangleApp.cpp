@@ -11,6 +11,7 @@
 #include "d3dApp.h"
 #include "MathHelper.h"
 #include "UploadBuffer.h"
+#include "Camera.h"
 
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
@@ -36,6 +37,8 @@ public:
     ~TriangleApp();
 
     virtual bool Initialize()override;
+
+    Camera camera;
 
 private:
     virtual void OnResize()override;
@@ -170,6 +173,10 @@ void TriangleApp::Update(const GameTimer& gt)
     ObjectConstants objConstants;
     XMStoreFloat4x4(&objConstants.WorldViewProj, XMMatrixTranspose(worldViewProj));
     mObjectCB->CopyData(0, objConstants);
+
+    camera.UpdateCamera();
+
+
 }
 
 void TriangleApp::Draw(const GameTimer& gt)

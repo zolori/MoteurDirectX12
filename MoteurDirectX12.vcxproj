@@ -139,9 +139,11 @@
     <ClCompile Include="d3dUtil.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameTimer.cpp" />
+    <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="MathHelper.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="TriangleApp.cpp" />
+    <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
@@ -151,9 +153,11 @@
     <ClInclude Include="DDSTextureLoader.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameTimer.h" />
+    <ClInclude Include="Geometry.h" />
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="UploadBuffer.h" />
+    <ClInclude Include="Vertex.h" />
     <ClInclude Include="WindowApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

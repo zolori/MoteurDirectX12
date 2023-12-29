@@ -1,15 +1,17 @@
 #pragma once
 #include <DirectXMath.h>
-#include "Transform.h"
+#include "GameObject.h"
 
 using namespace DirectX;
 
-class Camera
+class Camera : public GameObject
 {
 public:
     Camera();
     Camera(XMFLOAT4 position, XMFLOAT4 target, XMFLOAT4 up, XMFLOAT4 right);
     ~Camera();
+
+    void UpdateCamera();
 
     void SetIsOrthographic(bool isOrtho);
     void SetView(float width, float height);
@@ -27,4 +29,5 @@ protected:
     float mNearZ;
     float mFarZ;
     float mFOV;
+    float speed = 0.1f;
 };
