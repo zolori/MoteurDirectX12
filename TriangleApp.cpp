@@ -13,6 +13,7 @@
 #include "UploadBuffer.h"
 #include "Camera.h"
 #include "Vertex.h"
+#include "Geometry.h"
 
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
@@ -153,6 +154,8 @@ void TriangleApp::OnResize()
 
 void TriangleApp::Update(const GameTimer& gt)
 {
+    camera.UpdateCamera();
+
     // Convert Spherical to Cartesian coordinates.
     float x = mRadius * sinf(mPhi) * cosf(mTheta);
     float z = mRadius * sinf(mPhi) * sinf(mTheta);
@@ -175,13 +178,14 @@ void TriangleApp::Update(const GameTimer& gt)
     XMStoreFloat4x4(&objConstants.WorldViewProj, XMMatrixTranspose(worldViewProj));
     mObjectCB->CopyData(0, objConstants);
 
-    camera.UpdateCamera();
 
 
 }
 
 void TriangleApp::Draw(const GameTimer& gt)
 {
+
+    //ComputeBox();
     // Reuse the memory associated with command recording.
     // We can only reset when the associated command lists have finished execution on the GPU.
     ThrowIfFailed(mDirectCmdListAlloc->Reset());
@@ -383,13 +387,17 @@ void TriangleApp::BuildTriangleGeometry()
 {
 
 
-    std::array<VertexPositionColor, 3> vertices = {
+    std::array<VertexPositionColor, 6> vertices = {
         VertexPositionColor({ XMFLOAT3(0.0f, 1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
         VertexPositionColor({ XMFLOAT3(1.0f, -1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
         VertexPositionColor({ XMFLOAT3(-1.0f, -1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
+
+        VertexPositionColor({ XMFLOAT3(0.0f, 1.f, 0.000f), XMFLOAT4(Colors::Green) }),
+        VertexPositionColor({ XMFLOAT3(1.f, -1.f, 0.000f), XMFLOAT4(Colors::Green) }),
+        VertexPositionColor({ XMFLOAT3(-1.f, -1.f, 0.000f), XMFLOAT4(Colors::Green) }),
     };
 
-    std::array<std::uint16_t, 6> indices = { 0, 1, 2, 2, 1, 0 };
+    std::array<std::uint16_t, 6> indices = { 0, 1, 2,5,4,3 };
 
     const UINT vbByteSize = (UINT)vertices.size() * sizeof(VertexPositionColor);
     const UINT ibByteSize = (UINT)indices.size() * sizeof(std::uint16_t);
