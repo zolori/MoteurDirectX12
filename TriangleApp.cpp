@@ -12,6 +12,7 @@
 #include "MathHelper.h"
 #include "UploadBuffer.h"
 #include "Camera.h"
+#include "Vertex.h"
 
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
@@ -37,7 +38,7 @@ public:
     ~TriangleApp();
 
     virtual bool Initialize()override;
-
+    VertexPositionColor vertexPosColor;
     Camera camera;
 
 private:
@@ -380,16 +381,17 @@ void TriangleApp::BuildShadersAndInputLayout()
 
 void TriangleApp::BuildTriangleGeometry()
 {
-    std::array<Vertex, 3> vertices =
-    {
-        Vertex({ XMFLOAT3(0.0f, 1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
-        Vertex({ XMFLOAT3(1.f, -1.f, 0.0f), XMFLOAT4(Colors::Yellow) }),
-        Vertex({ XMFLOAT3(-1.f, -1.f, 0.0f), XMFLOAT4(Colors::Cyan) }),
+
+
+    std::array<VertexPositionColor, 3> vertices = {
+        VertexPositionColor({ XMFLOAT3(0.0f, 1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
+        VertexPositionColor({ XMFLOAT3(1.0f, -1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
+        VertexPositionColor({ XMFLOAT3(-1.0f, -1.f, 0.0f), XMFLOAT4(Colors::Magenta) }),
     };
 
-    std::array<std::uint16_t, 3> indices = { 0, 1, 2 };
+    std::array<std::uint16_t, 6> indices = { 0, 1, 2, 2, 1, 0 };
 
-    const UINT vbByteSize = (UINT)vertices.size() * sizeof(Vertex);
+    const UINT vbByteSize = (UINT)vertices.size() * sizeof(VertexPositionColor);
     const UINT ibByteSize = (UINT)indices.size() * sizeof(std::uint16_t);
 
     mTriangleGeo = std::make_unique<MeshGeometry>();

@@ -9,6 +9,7 @@ public:
 	void Translate(float x, float y, float z);
 	void Scale(float x, float y, float z);
 
+
 	XMFLOAT4 m_up;
 	XMFLOAT4 m_right;
 	XMFLOAT4 m_position;
